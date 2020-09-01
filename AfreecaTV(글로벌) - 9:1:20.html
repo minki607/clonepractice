@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Afreeca TV clone</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+
+    }
+
+    body {
+        font-family: Arial;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    /*navbar css*/
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        border-bottom: 1px solid #e5ebf3;
+    }
+
+    .logo {
+        margin: 0 25px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 60px;
+    }
+
+    .search-form {
+
+        display: flex;
+        border: 1px solid rgb(183, 170, 217);
+        padding: 6px;
+
+    }
+
+    .center {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .live-option,
+    .player-option {
+        display: flex;
+        margin-left: 20px;
+
+    }
+
+    .live-option h3,
+    .player-option h3 {
+        text-transform: uppercase;
+        font-weight: 100;
+        color: rgb(42, 41, 41);
+
+    }
+
+
+    .live-option i,
+    .player-option i {
+        margin-right: 5px;
+        font-size: 25px;
+
+    }
+
+    .live-option i {
+        color: #7bd168;
+    }
+
+    .player-option i {
+        color: #1771f8;
+    }
+
+
+    .search-form {
+        width: 250px;
+        border: 1px solid #1771f8;
+        border-radius: 5px;
+    }
+
+    .search-form input {
+        flex-grow: 2;
+        border: none;
+    }
+
+    .search-form input:focus {
+        outline: none;
+    }
+
+    .search-button {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: #1771f8;
+        font-size: 16px;
+    }
+
+    .search-button i {
+        margin-right: 5px
+    }
+
+    .right-menu {
+        display: flex;
+        align-items: center;
+
+    }
+
+
+    .right-menu li {
+        font-size: 13px;
+        margin-right: 15px;
+        padding-right: 10px;
+        border-right: 1px solid rgba(139, 139, 139, 0.374);
+    }
+
+    .right-menu a {
+        color: #666;
+    }
+
+    .right-menu li:first-child {
+        font-size: 10px;
+        border: none
+    }
+
+
+    .right-menu li:last-child {
+        border: none
+    }
+
+    .more {
+        margin-right: 20px;
+    }
+
+    /*side bar css*/
+
+    .sidebar {
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        background: #f9fafc;
+        border: 1px solid #e5ebf3;
+    }
+
+    .sidebar ul i {
+        margin: 0 5px;
+        color: #4d4d4d;
+    }
+
+    .sidebar ul a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 60px;
+        font-size: 15px;
+        color: #333;
+        padding-left: 30px;
+        position: relative;
+
+    }
+
+    .sidebar ul a .down {
+        font-size: 10px;
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        transition: 0.5s;
+
+    }
+
+    .sidebar ul a .rotate {
+        color: black;
+        transform: translateY(50%) rotate(-180deg)
+    }
+
+
+
+    .sidebar ul a:hover {
+        color: #1771f8;
+
+    }
+
+    .sub-menu1,
+    .sub-menu2,
+    .sub-menu3 {
+        display: none;
+        border-bottom: 1px solid #e5ebf3;
+        margin: 0px 20px;
+        transition: 1s;
+    }
+
+    .show {
+        display: block;
+
+    }
+
+
+    .sidebar ul li ul a {
+
+        font-weight: 100;
+        font-size: 12px;
+        line-height: 30px;
+
+
+    }
+
+    .sidebar ul li ul a:last-child {
+        margin-bottom: 15px;
+    }
+
+    /*Header CSS*/
+
+    .main {
+        border-bottom: 1px solid #e5ebf3;
+    }
+
+    .main,
+    footer {
+        padding-left: 200px;
+        margin: 2% 5%;
+        padding-bottom: 50px;
+
+
+    }
+
+    .ad {
+
+        width: 100%;
+        height: 230px;
+        background-image: url('http://pa.adimg.afreecatv.com/RealMedia/ads/Creatives/Afreecatv/200901_AHL_/200901_AHL_960x222.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .video-container {
+        margin-top: 15px;
+    }
+
+    .video {
+        position: relative;
+        height: 250px;
+        width: 250px;
+        border: 1px solid #e5ebf3;
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+
+    .sub-title {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    .sub-title img {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .sub-title a {
+        margin-right: 10px;
+        color: #1771f8;
+        font-size: 20px;
+
+    }
+
+    .sub-title p {
+        font-size: 10px;
+        color: gray;
+    }
+
+    .image-container img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 100%;
+        bottom: 30px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info .title {
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        margin: 10px;
+
+
+    }
+
+
+    .info .streamer {
+        margin: 13px;
+        float: left;
+        font-size: 10px;
+        color: #1771f8;
+
+    }
+
+    .info .viewers {
+        margin: 13px;
+        float: right;
+        font-size: 9px;
+        color: gray;
+    }
+
+    .live-status {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 10px;
+        padding: 2px 5px;
+        border-radius: 2px;
+        color: white;
+        background: red;
+    }
+
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .showmore {
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #e5ebf3;
+    }
+
+    footer ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    footer ul li {
+        padding: 0 15px;
+        border-right: 1px solid gray;
+    }
+
+    footer ul li a {
+        color: gray;
+    }
+
+    footer ul li:last-child {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        border: none;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src='https://cellularnews.com/wp-content/uploads/2020/03/Afreeca_Featured.jpg' alt='afreeca_logo' />
+            </div>
+            <div class="center">
+                <form class='search-form'>
+                    <input/>
+                    <button class='search-button' type='submit'>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <div class="live-option">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                    <h3>Go Live</h3>
+                </div>
+
+                <div class="player-option">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    <h3>VR Player</h3>
+                </div>
+
+
+            </div>
+
+            <ul class='right-menu'>
+                <li class="notice">
+                    <a href='#notice'>
+                        <i class="fa fa-volume-up" aria-hidden="true"></i>
+                        <strong>[Notice]</strong>2020 GSL Season 3 Ro24</a>
+                </li>
+                <li class="help">
+                    <a href='#help'>Help Center</a>
+                </li>
+                <li class="login">
+                    <a href='#login'>Log in</a>
+                </li>
+                <li class="signup">
+                    <a href='#signup'>Sign Up</a>
+                </li>
+            </ul>
+
+            <i class="more fa fa-sort-desc" aria-hidden="true"></i>
+        </nav>
+        <!--End of Nav-->
+
+        <!-- Side bar -->
+
+        <section class="sidebar">
+            <ul>
+                <li>
+                    <a href='#live'>
+                        <i class="fa fa-signal" aria-hidden="true"></i>LIVE
+                        <i id='toggle-menu-1' class="down fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+
+                    <ul class='sub-menu1'>
+                        <li>
+                            <a href='#all'>All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#VOD'>
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>VOD
+                        <i id='toggle-menu-2' class="down fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class='sub-menu2'>
+                        <li>
+                            <a href='#fag'>Favorites</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>Recommended</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>Popular VOD</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>TV Clip</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>History</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>Category</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#My'>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>My
+                        <i id='toggle-menu-3' class="down fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+
+                    <ul class='sub-menu3'>
+                        <li>
+                            <a href='#fag'>Favorites</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>Fan Club</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>Feed</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>Issue</a>
+                        </li>
+                        <li>
+                            <a href='#fag'>Recently Watched</a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </section>
+        <!--End of Sidebar-->
+
+        <!--Main-->
+        <div class='main'>
+            <div class="ad">
+            </div>
+            <div class="content">
+                <span class='sub-title'>
+                    <img src='http://admin-cf.img.afreecatv.com/curation/5747598bea1e66b2f.jpg' alt='live-logo'>
+                    <a href='#LIVE'>
+                        <strong>LIVE Now</strong>
+                    </a>
+                    <p>Recommended Streamers</p>
+                </span>
+
+                <div class="video-container">
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">AHL SEASON 1 2</span>
+                            <div class="subinfo">
+                                <span class="streamer">AHL</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">PROGRAMMER HACKS</span>
+                            <div class="subinfo">
+                                <span class="streamer">CODER</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">BLAH BLAHBLAH</span>
+                            <div class="subinfo">
+                                <span class="streamer">BLAH</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">LETS GO</span>
+                            <div class="subinfo">
+                                <span class="streamer">GOGOSING</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">GUYS I AM STREAMING</span>
+                            <div class="subinfo">
+                                <span class="streamer">SREA</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">GOOOOOOD</span>
+                            <div class="subinfo">
+                                <span class="streamer">NONONO</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">YUMMMY MUKBANG</span>
+                            <div class="subinfo">
+                                <span class="streamer">TZYANG</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <div class="image-container">
+                            <div class="live-status">LIVE</div>
+                            <img src='https://multimedia.europarl.europa.eu/o/europarltv-theme/images/europarltv/media-default-thumbnail-url-video.png'
+                                alt='thubmanil' />
+                        </div>
+                        <div class="info">
+                            <span class="title">LEAGUE OF LEGENDS</span>
+                            <div class="subinfo">
+                                <span class="streamer">RIOT</span>
+                                <span class="viewers">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 384</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of video container-->
+
+                <button class='showmore'>Show More
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href='#'>Ask 1:1</a>
+                </li>
+                <li>
+                    <a href='#'>Terms of use</a>
+                </li>
+                <li>
+                    <a href='#'>Privacy Policy</a>
+                </li>
+                <li>
+                    <a href='#'>Youth Policy</a>
+                </li>
+                <li>
+                    <a href='#'>Copyright Policy</a>
+                </li>
+                <li>
+                    <a href='#'>Terms of purchases</a>
+                </li>
+                <li>
+                    <a href='#'>Help</a>
+                </li>
+                <li>
+                    ⓒ AfreecaTV Corp
+                </li>
+
+
+            </ul>
+
+
+        </footer>
+
+        <!--End of Main-->
+
+
+    </div>
+
+
+
+</body>
+<script>
+    (function () {
+        const btn1 = document.getElementById('toggle-menu-1');
+        const btn2 = document.getElementById('toggle-menu-2');
+        const btn3 = document.getElementById('toggle-menu-3');
+
+        const menu1 = document.querySelector('.sub-menu1')
+        const menu2 = document.querySelector('.sub-menu2')
+        const menu3 = document.querySelector('.sub-menu3')
+
+        btn1.addEventListener('click', function () {
+            if (menu2.classList.contains('show')) {
+                menu2.classList.remove('show')
+                btn2.classList.remove('rotate')
+
+            } else if (menu3.classList.contains('show')) {
+                menu3.classList.remove('show')
+                btn3.classList.remove('rotate')
+            }
+            btn1.classList.toggle('rotate')
+            menu1.classList.toggle('show')
+        })
+
+
+        btn2.addEventListener('click', function () {
+            if (menu1.classList.contains('show')) {
+                menu1.classList.remove('show')
+                btn1.classList.remove('rotate')
+            } else if (menu3.classList.contains('show')) {
+                menu3.classList.remove('show')
+                btn3.classList.remove('rotate')
+            }
+            btn2.classList.toggle('rotate')
+            menu2.classList.toggle('show')
+
+        })
+
+        btn3.addEventListener('click', function () {
+            if (menu1.classList.contains('show')) {
+                menu1.classList.remove('show')
+                btn1.classList.remove('rotate')
+            } else if (menu2.classList.contains('show')) {
+                menu2.classList.remove('show')
+                btn2.classList.remove('rotate')
+            }
+            btn3.classList.toggle('rotate')
+            menu3.classList.toggle('show')
+
+        })
+
+
+
+
+    })()
+
+
+</script>
+
+</html>
