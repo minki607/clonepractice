@@ -1,4 +1,4 @@
-# clone practice 
+# Landing Page Clone Practice 
 
 **매일 클론코딩** 
 
@@ -37,3 +37,9 @@
  - border outline 색: #e5ebf3; 
 
 > 너무 튀지도 않고 적당한 경계선. 살짝 섞인 파랑
+
+**3)** 9/2/2020  - 구글 
+
+	직접적으로 쓰진 않았지만 :focus-within 이란걸 알게됨.
+	<form>의 <input> 필드 중 하나가 포커스된 경우 전체 <form>을 강조해야 할 때 유용하게 쓰일듯하다.
+	ex) 보통 input을 바로 쓰지않고 wrapper에 감싸고 이미지나 아이콘과 같이 쓸때가 많은데 wrapper를 input인것처럼 보이게할수있을듯.
