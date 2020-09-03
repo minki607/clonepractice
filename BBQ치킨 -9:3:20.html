@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <title>BBQ Clone</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+
+    }
+    
+   :root {
+      --main-bg-color: #d0112b;
+    }
+    
+  
+    .container{
+        width: 1000px;
+        margin: auto;
+        
+    }
+    
+    .nav-top {
+        display: flex; 
+        justify-content: space-between;
+    }
+    
+ 
+    .nav-top li {
+        position: relative;
+        margin: 5px
+    }
+    
+    .nav-top li:before {
+    position: absolute;
+    right: -5px;
+    top: 7px;
+    height: 8px;
+    border-left: 1px solid #dbdbdb;
+    content: ''
+
+ 
+    }
+    .nav-top a {
+        font-size: 12px;
+        color: #555;
+    }
+    
+    
+    .left-top-menu {
+        display: flex;
+    }
+    
+    .nav-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top:10px;
+    }
+    
+    .nav-bottom .logo img {
+        width: 100px;
+        height: 50px;
+    }
+    
+    .right-bottom-menu {
+        display: flex
+    }
+    
+    .right-bottom-menu li {
+        padding: 15px;
+        
+    }
+    
+    .right-bottom-menu li a{
+        color :#000;
+        font-weight: 400;
+    }
+    
+    
+    #online-order a{
+        color: var(--main-bg-color);
+        padding: 5px;                  
+        border: 1px solid red;
+        border-radius: 30px;
+        transition: 1s;
+    }
+    
+    #online-order a:hover {
+        background-color:  var(--main-bg-color);
+        color: #fff;
+    }
+    
+    .bbq-main {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.4fr;
+        grid-template-areas:
+            "slider slider order-section"
+            "slider slider store-loc"
+            "chicken-menu side-menu notification"
+            "event membership franchise";
+        margin-top: 5px;
+        grid-gap: 10px
+    }
+    
+    .bbq-main h3 {
+        font-size: 25px;
+        color: #111;
+        font-family: "NanuSquareOTFR", "Malgun Gothic","Dotum", "Arial", "sans-serif", "serif"
+    }
+    
+    .bbq-main button {
+        padding: 10px 20px;
+        border: 1px solid #111;
+        margin-top: 10px;
+        background-color: transparent;
+    }
+    
+    .slider{
+        grid-area: slider;
+        
+    }
+    
+    .slider img {
+        width: 100%
+    }
+    
+    
+  
+    .order-section{
+        grid-area: order-section;
+        background-color:#f7f0e8;
+        display: flex;
+        justify-content: center;
+    }
+    
+     
+    .order-section img, .chicken-menu img, .side-menu img{
+        height: 150px;
+        width: 150px;
+        align-self:center;
+    }
+    
+   .details{
+        align-self:flex-start;
+        margin-top: 30px;
+    }
+    
+    .store-loc{
+        grid-area: store-loc;
+        background-color:#e9dad9;    
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    
+    #search-input{
+        height: 40px;
+        width: 200px;
+        border: none;
+        padding: 10px;
+    }
+    
+    #search-btn{
+        background-color: #636363;
+        color:white;
+        
+    }
+    
+      .chicken-menu{
+        grid-area: chicken-menu;
+        background-color:#f5ebea;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .side-menu{
+        grid-area: side-menu;
+        background-color: #f5ebea;
+        display: flex;
+        justify-content: center;
+
+    }
+    
+    .notification {
+        grid-area: notification;
+        background-color: #eaeaea;
+        display: flex;
+        justify-content:flex-start;
+        padding-left: 30px;
+        align-items: center;
+    
+    }
+    
+
+    .notification ul {
+        font-size: 12px;
+       margin-top: 10px;
+    }
+    
+    .notification li {
+        margin-top: 10px;
+    }
+    
+    .event {
+        grid-area: event;
+        border: 1px solid #e4e4e4;
+    }
+    
+    .membership{
+        grid-area: membership;
+        border: 1px solid #e4e4e4;
+    }
+    
+    .franchise{
+        grid-area: franchise;
+        border: 1px solid #e4e4e4;
+    }
+    
+    .more-links{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center
+        
+    }
+    
+    .more-links h3{
+        grid-column-start: 2;
+        align-self: center;
+    }
+    
+    .more-links img{
+        align-self: center;
+        height: 50px;
+    }
+
+    
+   
+    
+
+    
+  
+
+</style>
+
+<body>
+
+    <div class="container">
+      <nav class='navbar'>
+        <div class='nav-top'>
+            <ul class='left-top-menu'>
+                <li><a href='#'>바베큐 치킨</a></li>
+                <li><a href='#'>바베큐몰</a></li>
+                <li><a href='#'>닭익는마을</a></li>
+                <li><a href='#'>우쿠야</a></li>
+                <li><a href='#'>올떡</a></li>
+                <li><a href='#'>와타리</a></li>
+            </ul>
+              <ul class='left-top-menu'>
+                <li><a href='#'>로그인</a></li>
+                <li><a href='#'>회원가입</a></li>
+                <li><a href='#'>고객센터</a></li>
+            </ul>
+        </div>    
+        <div class='nav-bottom'>
+            <div class="logo"><a href='#bbq'><img src='https://www.bbq.co.kr/images/common/logo_header_bbq.png'></a></div>
+             <ul class='right-bottom-menu'>
+                <li><a href='#'>메뉴소개</a></li>
+                <li><a href='#'>매장찾기</a></li>
+                <li><a href='#'>브랜드</a></li>
+                <li><a href='#'>이벤트</a></li>
+                <li id='online-order'><a href='#'>온라인주문</a></li>
+            </ul>
+        </div>  
+      </nav>
+      
+      <main class='bbq-main'>
+         <article class="slider"><img src='https://www.onews.tv/news/photo/202008/26616_27819_2559.jpg'></article>
+         <article class="order-section">
+            <div class="details">
+                <h3>온라인주문</h3>
+                 <button>주문하기</button>
+            </div>
+            <img src="https://img.bbq.co.kr:449/uploads/bbq_d/thumbnail/20200819_BBQ_%EC%88%98%EC%A0%9C%EB%A7%A5%EC%A3%BC%EC%84%B8%ED%8A%B85%EC%A2%85_PC%EC%8D%B8%EB%84%A4%EC%9D%BC(480x480px)_2%EC%B0%A8%EC%88%98%EC%A0%95_SET1.png" alt="chicken">
+         
+         </article>
+         <article class="store-loc">
+             <div class="details">
+                <h3>매장안내</h3>
+                <form id='search-form'>
+                    <input id='search-input' placeholder='매장명 또는 주소를 입렵하세요'/>
+                    <button id='search-btn' type='submit'><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+                 <button>전체매장 보기</button>
+            </div>
+         </article>
+         
+        <article class="chicken-menu">
+            <div class="details">
+                <h3>핫황금올리브</h3>
+                 <button>메뉴보기</button>
+            </div>
+            <img src="https://img.bbq.co.kr:449/uploads/bbq_d/thumbnail/20200819_BBQ_%EC%88%98%EC%A0%9C%EB%A7%A5%EC%A3%BC%EC%84%B8%ED%8A%B85%EC%A2%85_PC%EC%8D%B8%EB%84%A4%EC%9D%BC(480x480px)_2%EC%B0%A8%EC%88%98%EC%A0%95_SET1.png" alt="chicken">
+        </article>
+         <article class="side-menu">
+             <div class="details">
+                <h3>사이드메뉴</h3>
+                 <button>메뉴보기</button>
+            </div>
+            <img src="https://img.bbq.co.kr:449/uploads/bbq_d/thumbnail/20200819_BBQ_%EC%88%98%EC%A0%9C%EB%A7%A5%EC%A3%BC%EC%84%B8%ED%8A%B85%EC%A2%85_PC%EC%8D%B8%EB%84%A4%EC%9D%BC(480x480px)_2%EC%B0%A8%EC%88%98%EC%A0%95_SET1.png" alt="chicken">
+         </article> 
+         <article class="notification">
+              <div class="details">
+                <h3>공지사항</h3>
+                <ul>
+                    <li>BBQ, 곡성·구례지역 수해복구 지원 중인 군장병에...</li>
+                    <li>BBQ치킨_BBQ, 연휴 4일간 치킨 100억 원 넘게 팔..</li>
+                    <li>BBQ, 전남 구례 수해지역에 치킨 1,000인분 전달</li>
+                </ul>
+            </div>
+         </article>
+         
+         <article class="more-links event">
+             <h3>이벤트</h3>
+             <img src='https://www.bbq.co.kr/images/main/ico_ban_event.png' alt='event'/>
+         </article>
+         <article class="more-links membership">
+             <h3>멤버쉽</h3>
+             <img src='https://www.bbq.co.kr/images/main/ico_ban_membership.png' alt='membership'/>
+         </article> 
+         
+         <article class="more-links franchise">
+             <h3>창업문의</h3>
+             <img src='https://www.bbq.co.kr/images/main/ico_ban_coupon.png' alt='franc'/>
+         </article>
+          
+      </main>
+
+    </div>
+
+
+</body>
+<script>
+
+</script>
+
+</html>
