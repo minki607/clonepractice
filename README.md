@@ -53,11 +53,15 @@
 **5)** 9/4/2020  - BBQ치킨 슬라이더
 
 	항상 슬라이더는 만들어 쓰기보다는 slick같은 라이브러리를 사용했는데 막상 만들어보니 생각보다 손이 많이 갔다. 
-	[유튜브 강좌 참고](https://www.youtube.com/watch?v=0wvrlOyGlq0)
 
+[유튜브 강좌 참고](https://www.youtube.com/watch?v=0wvrlOyGlq0)
 
 - radiobox 사용시 보통 input 자체 css를 변경하곤했는데 radiobox는 숨겨두고 label을 담고있는 네비게이션을 따로 만들어 쓰면 훨씬 자유로운 스타일링이 가능할수 있을듯.
 
 **5)** 9/5/2020  - Netflix (part1)
 
 	넷플릭스 이외에도 자주쓰이는 점보트론(jumbotron) 레이아웃을 만들어봤다. 가상클래스 배경에 linear gradient 와 radial gradient를 한번 줬으나 중간에 글씨가 잘 보이지 않아 jumbotron 자체에 boxshadow를 한번 더 넣어줌. 
+
+**5)** 9/6/2020  - Netflix (part2)
+
+	넷플릭스 랜딩페이지의 하단부분과 아코디언 방식의 정보탭.  	
