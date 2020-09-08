@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Bootstrap Clone</title>
+</head>
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    }
+
+    :root {
+    --main-bg-color: #563d7c;
+    --lighter-main: #cdbfe3;
+}
+
+
+     .jumbotron {
+        background-color: var(--main-bg-color);
+        height: 100vh;
+        max-height: 800px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 60px;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .nav-link, .right-menu{
+        margin: 15px;
+    }
+
+    .main-menu {
+        flex: 1;
+        margin-left: 15px;
+    }
+
+    .main-menu ul {
+        display: flex;
+
+    }
+
+    .main-menu li a, .right-menu li a{
+        padding: 20px 10px;
+    }
+
+
+    .main-menu li a:hover, .right-menu li a:hover{
+        background-color: #fafafa;
+    }
+
+    .right-menu{ 
+        display: flex;
+    }
+
+    .menu-toggle {
+        color: var(--main-bg-color);
+        display: none;
+        cursor: pointer;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+    }
+
+    .intro h2{
+        color: white;
+        max-width: 700px;
+        margin: 40px 30px;
+        font-weight: 100;
+        text-align: center; 
+    }
+
+    .intro .download-btn {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid var(--lighter-main);
+    border-radius: 5px;
+    padding: 16px;
+    }
+
+    .download-btn:hover{
+        background-color: white;
+        color: var(--main-bg-color);
+    }
+
+    .intro .version{
+        margin-top: 15px;
+        color: var(--lighter-main);
+    }
+
+   .container {
+        max-width: 1130px;
+        margin: 90px auto;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        
+    }
+    
+    .fw-desc{
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .fw-desc h2{
+        
+        margin-bottom: 15px;
+        
+    }
+
+    .fw-desc p{
+        color: gray;
+        margin: 30px;
+    }
+    .fw-features {
+        margin-top: 30px;
+        display: flex;
+    }
+    .fw-features img{
+        width: 300px;
+        margin-bottom: 15px;
+    }
+
+    .feature {
+        margin: 16px;
+        text-align: center;
+    }
+
+    .feature p {
+        max-width: 500px;
+        margin: 0 auto;;
+    }
+
+    .fw-extra{
+        margin-top:30px;
+    }
+
+    .see-more-proj{
+    color: var(--main-bg-color);
+    background-color: transparent;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 5px;
+    padding: 13px;
+    }
+
+    .see-more-proj:hover{
+        background-color: var(--main-bg-color);
+        color:white;
+    }
+
+
+    @media only screen and (max-width:900px){
+
+        .navbar {
+            z-index:999;
+        }
+        .main-menu ul {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #ffffff;
+            width: 100%;
+            padding: 30px;
+            transform: translateY(-150px);
+            transition: 0.5s;
+
+        }
+
+         .main-menu ul.toggle a {
+            font-size: 16px;
+            width: 100%;
+            display: block;
+            
+        }
+        .right-menu li {
+            display: none;
+        }
+        .menu-toggle {
+            z-index: 999;
+            margin: 15px;
+            display: inline-block;
+        }
+
+        .main-menu ul.toggle {
+            transform: translateY(50px);
+
+        }
+
+        .fw-desc{
+            max-width: 500px;
+        }
+        .fw-features {
+            flex-direction: column;
+        }
+       
+ 
+    } 
+
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-link">
+            <a href='#'>
+                <h1>부트스트랩</h1>
+            </a>
+        </div>
+        <div class="main-menu">
+            <ul>
+                <li>
+                    <a href=#>시작하기</a>
+                    </a>
+                </li>
+                <li>
+                    <a href=#>CSS</a>
+                    </a>
+                </li>
+                <li>
+                    <a href=#>콤포넌트</a>
+                    </a>
+                </li>
+                <li>
+                    <a href=#>자바스크립트</a>
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>맞춤화</a>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <ul class='right-menu'>
+            <li>
+                <a href='#'>전시관</a>
+            </li>
+            <li>
+                <a href='#'>블로그</a>
+            </li>
+            <i class="menu-toggle fa fa-bars" aria-hidden="true"></i>
+        </ul>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="intro">
+            <svg width="10em" height="10em" viewBox="0 0 16 16" class="bi bi-bootstrap" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M12 1H4a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3zM4 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4z"
+                />
+                <path fill-rule="evenodd" d="M8.537 12H5.062V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396zM6.375 4.658v2.467h1.558c1.16 0 1.764-.428 1.764-1.23 0-.78-.569-1.237-1.541-1.237H6.375zm1.898 6.229H6.375V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"
+                />
+            </svg>
+         <h2>부트스트랩은 반응형이며 모바일 우선인 웹프로젝트 개발을 위한 가장 인기있는 HTML, CSS, JS 프레임워크입니다.</h2>   
+         <a class='download-btn' href='#'>부트스트랩 다운로드</a>
+         <p class='version'>현재 v.3.3.2</p>
+        </div>
+    
+    </header>
+    <main class="container">
+        <div class="fw-desc">
+                <h2>모든사람과 모든곳을 위해 설계되었습니다.</h2>
+                <p>부트스트랩은 프론트엔드 웹개발을 더 빠르고 쉽게 만들어줍니다. 모든 기술 수준의 사람들, 모든 형태의 기기들, 모든 크기의 프로젝트들을 위해 만들어졌습니다.</p>
+        </div>
+
+        <div class='fw-features'>
+            <div class="feature">
+                    <img src='http://bootstrapk.com/assets/img/sass-less.png' alt='free-processor'>
+                    <h2>프리프로세서</h2>
+                    <p>부트스트랩은 평범한 CSS 로 제공합니다만, 그것의 소스코드는 2개의 인기있는 CSS 프리프로세서인 Less 와 Sass 를 사용합니다. 신속하게 프리컴파일된 CSS 로 시작하거나 소스를 빌드하세요.</p>
+            </div>
+            <div class="feature">
+                    <img src='http://bootstrapk.com/assets/img/devices.png' alt='all-device'>
+                    <h2>하나의 프레임워크, 모든기기</h2>
+                    <p>부트스트랩은 웹사이트와 어플리케이션을 단일 코드 베이스로 CSS 미디어 쿼리를 이용하여 휴대폰에서부터 태블릿, 데스크탑까지 쉽고 효과적으로 크기를 조절합니다</p>
+            </div>
+            <div class="feature">
+                    <img src='http://bootstrapk.com/assets/img/components.png' alt='many-more'>
+                    <h2>많은 기능들</h2>
+                    <p>부트스트랩과 함께, 보통의 HTML 요소들, 맞춤형 HTML 과 CSS 콤포넌트들, 그리고 놀라운 jQuery 플러그인들로 광범위하고 아름다운 문서들을 가질 수 있습니다.</p>
+            </div>
+        </div>
+
+        <div class="fw-desc fw-extra">
+                <p>부부트스트랩은 오픈소스 입니다. 깃허브에서 호스트되고, 개발되고, 유지보수 됩니다</p>
+                <a class='see-more-proj' href='#'>깃허브 프로젝트 보기</a>
+        </div>
+
+        
+    </main>
+    <hr>
+
+
+</body>
+<script>
+  (function () {
+        const menu_icon = document.querySelector('.menu-toggle')
+        const menu_items = document.querySelector('.main-menu ul')
+
+        menu_icon.addEventListener('click', function () {
+            menu_items.classList.toggle('toggle')
+
+
+        })
+
+    }
+    )()
+
+</script>
+
+</html>
