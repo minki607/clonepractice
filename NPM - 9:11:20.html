@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>NPM Clone</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  header>div {
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    height: 55px;
+
+  }
+
+  .quote {
+    min-width: 100px;
+
+  }
+
+  nav {
+    min-width: 600px;
+    font-size: 11px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0px 7px;
+  }
+
+  nav a:hover {
+    color: gray;
+  }
+
+  .blackHeart {
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  .npmLogo {
+    width: 80px;
+    margin-right: 10px;
+  }
+
+  form .form-container {
+    display: flex;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form input {
+    background-color: rgba(0, 0, 0, .05);
+    background-image: url(https://raw.githubusercontent.com/ironhack-labs/lab-html-exercise/master/images/magnifying-glass.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    width: 100%;
+    min-width: 200px;
+    padding-left: 40px;
+    padding-right: 30px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    letter-spacing: .5px;
+    border-style: none;
+  }
+
+  form button {
+    position: right;
+    flex-direction: flex-end;
+    background-color: black;
+    color: white;
+    border-style: none;
+    font-family: 'Poppins';
+    padding: 12px 18px;
+
+  }
+
+  .search-login>a {
+    color: black;
+
+  }
+
+  .nav-bar-links {
+    min-width: 200px;
+  }
+
+  .join-btn {
+    color: black;
+    background-color: white;
+    text-align: center;
+    border: 1px solid rgba(171, 171, 171, 0.377);
+    padding: 11px 18px;
+    margin: 10px 10px;
+  }
+
+  .login-btn {
+    color: black;
+    text-align: center;
+    padding: 12px 0px;
+    margin: 10px 10px;
+  }
+
+  #intro {
+    display: flex;
+    height: 100vh;
+    max-height: 800px;
+    background-image: url(https://static.npmjs.com/attachments/ck3uwvv67mydydr74ea00ip4j-bg-stripes.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #intro h1 {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    width: 900px;
+    height: 90px;
+    margin-bottom: 60px;
+  }
+
+  #intro h2 {
+    font-size: 30px;
+    margin: 20px 0px;
+  }
+
+  .description {
+    max-width: 500px;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .links {
+    display: flex;
+    min-width: 400px;
+
+  }
+
+  .plans-btn {
+    background-color: #c12027;
+    border-bottom: 5px solid #fa8717;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 50px;
+    margin: 100px 15px;
+  }
+
+  .learn-btn {
+    background-color: #e71aa8;
+    border-bottom: 5px solid #b30ad2;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 50px;
+    margin: 100px 15px;
+  }
+
+  #npm-description {
+    margin: 60px 0px 100px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  #npm-description img {
+    height: 100px;
+    width: 100px;
+  }
+
+
+  .npm-phrase {
+    font-family: 'Poppins';
+    font-size: 14px;
+    width: 700px;
+  }
+
+  .extra-details {
+    color: black;
+    margin-top: 30px;
+  }
+
+  .extra-details h2 {
+    margin-bottom: 15px;
+  }
+
+  .open-source {
+    background-image: url(https://static.npmjs.com/attachments/ck3uwg3a8731988744oecrjxu-weloveopensource-bg-800-2x.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+
+  }
+
+  .open-source .description h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+</style>
+
+<body>
+
+  <body>
+    <header class="header">
+      <div class="container-nav">
+        <div class="quote">
+          <img class="blackHeart" src="https://raw.githubusercontent.com/ironhack-labs/lab-html-exercise/master/images/black-heart.png"
+            alt="black heart" />
+          <span>New Patch, Merge?</span>
+        </div>
+        <nav class="nav-bar">
+          <ul class="nav-bar-ul">
+            <li>
+              <a href='#products'>Products</a>
+            </li>
+            <li>
+              <a href='#solutions'>Solutions</a>
+            </li>
+            <li>
+              <a href='#resources'>Resources</a>
+            </li>
+            <li>
+              <a href='#docs'>Docs</a>
+            </li>
+            <li>
+              <a href='#support'>Support</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="search-login">
+        <img class="npmLogo" src="https://raw.githubusercontent.com/ironhack-labs/lab-html-exercise/master/images/npm-logo.png" alt="NPM logo">
+        <form class="search-form">
+          <div class="form-container">
+            <input type="text" name="search" placeholder="Search packages">
+            <button type="submit">Search</button>
+          </div>
+        </form>
+        <div class="nav-bar-links">
+          <button class="join-btn">Sign up</button>
+          <a href='#' class="login-btn">Sign In</a>
+        </div>
+      </div>
+    </header>
+    <section id="intro">
+      <h1>
+        <strong>Build amazing things</strong>
+      </h1>
+      <article class="description">
+        <p>Essential JavaScript development tools that help you go to market faster and build powerful applications using modern
+          open source code.</p>
+
+        <h2>
+          <strong>Take your Javascript development up a notch</strong>
+        </h2>
+        <p>Get started today for free, or step up to npm Pro to enjoy a premium JavaScript development experience, with features
+          like private packages.</p>
+
+      </article>
+      <div class="links">
+        <a href='#' class="plans-btn">Sign up for free</a>
+        <a href='#' class="learn-btn">
+          <span>
+            <strong>Learn about Pro</strong>
+          </span>
+        </a>
+      </div>
+
+    </section>
+    <section id="npm-description">
+      <img src="https://static.npmjs.com/attachments/ck3uwed1cmso79y74pjugy10f-gak-2x.png" alt='polygon'>
+      <article class="description extra-details">
+
+        <h2>
+          <strong>Bring the best of open source to you, your team, and your company</strong>
+        </h2>
+        <p>Relied upon by more than 11 million developers worldwide, npm is committed to making JavaScript development elegant,
+          productive, and safe. The free npm Registry has become the center of JavaScript code sharing, and with more than
+          one million packages, the largest software registry in the world. Our other tools and services take the Registry,
+          and the work you do around it, to the next level.</p>
+
+      </article>
+    </section>
+
+    <section class='open-source'>
+      <article class="description">
+        <h2>
+          <strong>We ❤ open source</strong>
+        </h2>
+        <p>At npm, Inc., we're proud to dedicate teams of full-time employees to operating the npm Registry, enhancing the CLI,
+          improving JavaScript security, and other projects that support and nurture a vibrant open source community.</p>
+
+      </article>
+    </section>
+
+
+
+  </body>
+</body>
+<script>
+
+</script>
+
+</html>
