@@ -88,4 +88,10 @@
 
 [시멘틱 마크업의 종류/중요성](https://www.daleseo.com/html-semantic-markup/)
 
+**11)** 9/12/2020  - NPM 공식사이트 (part)
+
+	세부적인 수치 (max-height, font-size등 변경) + 반응형 추가. 폰트사이즈를 px로 작성해 하나하나 다 바꿔줘야했음. 다음부턴 em, rem 만 사용해서 root값만 바꿔줄 예정.
+
+	
+
 	

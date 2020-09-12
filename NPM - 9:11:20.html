@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
   <title>NPM Clone</title>
 </head>
 <style>
@@ -36,7 +36,7 @@
   }
 
   nav {
-    min-width: 600px;
+    max-width: 600px;
     font-size: 11px;
   }
 
@@ -130,8 +130,7 @@
 
   #intro {
     display: flex;
-    height: 100vh;
-    max-height: 800px;
+    height: 100%;
     background-image: url(https://static.npmjs.com/attachments/ck3uwvv67mydydr74ea00ip4j-bg-stripes.png);
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -143,12 +142,11 @@
   }
 
   #intro h1 {
+    margin: 60px 0;
     font-size: 70px;
     color: white;
     text-align: center;
-    width: 900px;
-    height: 90px;
-    margin-bottom: 60px;
+    max-width: 500px;
   }
 
   #intro h2 {
@@ -165,7 +163,7 @@
 
   .links {
     display: flex;
-    min-width: 400px;
+    max-width: 600px;
 
   }
 
@@ -224,12 +222,16 @@
     margin-bottom: 15px;
   }
 
+  .extra-details p{
+    font-weight: 100;
+    margin: 0 5px;
+  }
+
   .open-source {
     background-image: url(https://static.npmjs.com/attachments/ck3uwg3a8731988744oecrjxu-weloveopensource-bg-800-2x.png);
-    background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 300px;
+    min-height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -241,6 +243,71 @@
     font-size: 36px;
     margin-bottom: 30px;
   }
+
+  @media only screen and (max-width:700px){
+  
+
+  .search-login {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .npmLogo{
+    margin: 10px 0px;
+  }
+  
+  .quote{
+    display:none;
+  }
+
+  header>div {
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  .links {
+    margin: 30px 0px;
+    flex-direction: column;
+  
+  }
+
+  .plans-btn, .learn-btn {
+    margin: 5px 0;
+  }
+
+  #intro h1 {
+    max-width: 250px;
+    margin: 0;
+    font-size: 40px;
+    margin: 30px 0px;
+    height: 100%;
+  }
+
+  #intro p{
+    font-size: 13px;
+    font-weight: 100;
+    margin: 0 10px;
+  }
+
+  .open-source{
+    padding: 30px 0;
+  }
+
+  .open-source .description h2{
+    font-size: 20px;
+  }
+  .open-source p{
+    margin: 15px;
+
+  }
+  .open-source .description {
+    margin: 0;
+  }
+  }
+
+
 </style>
 
 <body>
@@ -288,19 +355,16 @@
       </div>
     </header>
     <section id="intro">
-      <h1>
-        <strong>Build amazing things</strong>
-      </h1>
+      <h1><strong>Build amazing things</strong></h1>
       <article class="description">
-        <p>Essential JavaScript development tools that help you go to market faster and build powerful applications using modern
-          open source code.</p>
+        <p>We're npm, Inc., the company behind Node package manager, the npm Registry, and npm CLI. We offer those to the community for free, but our day job is building and selling useful tools for developers like you.
+        </p>
 
         <h2>
           <strong>Take your Javascript development up a notch</strong>
         </h2>
         <p>Get started today for free, or step up to npm Pro to enjoy a premium JavaScript development experience, with features
           like private packages.</p>
-
       </article>
       <div class="links">
         <a href='#' class="plans-btn">Sign up for free</a>
