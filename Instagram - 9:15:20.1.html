@@ -27,6 +27,10 @@
 
     }
 
+    body{
+        background-color: var(--main-background-color);
+    }
+
     /* navbar */
     .navbar {
         position: fixed;
@@ -96,24 +100,67 @@
 
     .main_container {
         padding: 130px 0 60px;
-        background-color: var(--main-background-color);
         min-height: 100vh;
+        display: flex;
+        max-width: 1010px;
+        margin: 0 auto;
 
     }
     .main_container > .wrap {
         max-width: 600px;
-        margin: 0 auto;
     }
 
-    .main_container .post {
+  
+
+    .main_container .post, .insta_stories {
         margin-bottom: 60px;
         border: 1px solid var(--main-border-color);
         border-radius: 3px;
-        background-color: var(--white-fill)
+        background-color: var(--white-fill);
+        position: relative;
     }
 
-    .post {
+    .insta_stories{
+        height: 120px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items:center;
+    }
+
+    .stories_item {
+        padding: 15px 10px;
+    }
+
+    .stories_item:first-child {
+        padding-left: 30px;
+    }
+
+    .stories_item button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        width: 60px;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    .user_story {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 5px;
+        padding: 5px;
         position: relative;
+    }
+
+    .user_story img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        box-shadow: 1px -1px 1px 1px rgba(247, 138, 22, 0.85), 0 0 0 1px rgb(184, 66, 231);
+        pointer-events: none;
     }
 
     .post > .post_header {
@@ -242,6 +289,34 @@
     .post .tagged {
         color: #01376b;
     }
+
+    .main_container > .wrap_right{
+        padding: 30px;
+        width: 350px;
+
+    }
+
+    .profile_details{
+        display: flex;
+    }
+
+    .profile_text{
+        margin-left: 15px;
+    }
+
+    .profile_text > .username {
+        font-size: 1rem;
+    }
+
+    .profile_text > .name {
+        font-size: 0.7rem;
+        margin-top: 5px;
+        color: #969696;
+    }
+
+
+
+
 </style>
 
 <body>
@@ -271,6 +346,27 @@
     <!-- Main -->
     <main class="main_container">
         <div class="wrap">
+
+            <div class="insta_stories">
+                    <div class="stories_item">
+                            <button>
+                              <div class="user_story">
+                                <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="profile_image">
+                              </div>
+                              <p>user_wt1</p>
+                            </button>
+                    </div>
+
+                    <div class="stories_item">
+                            <button>
+                              <div class="user_story">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="profile_image">
+                              </div>
+                              <p>user_3T2</p>
+                            </button>
+                    </div>
+            </div>
+
             <div class="post">
                     <div class="post_header">
                             <a href="#" class="profile">
@@ -324,7 +420,18 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="wrap_right">
+            <div class="profile_details">
+                <div class="profile_img">
+                        <!--이미지 파일 인스타그램 그대로 복사-->
+                        <img alt="mingeesuh's profile picture" class="_6q-tv" data-testid="user-avatar" draggable="false"  height='50px' style='mix-blend-mode: multiply;' src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ad=z-m&amp;_nc_ht=scontent-nrt1-1.cdninstagram.com&amp;_nc_ohc=FSEg3KUVGIQAX8bjBUo&amp;oh=0715d3d45db295f700e4e8abc3254496&amp;oe=5F8A538F&amp;ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2">
+                </div>
+                <div class="profile_text">
+                        <p class='username'>mingeesuh</p>
+                        <p class='name'>Min Gee Suh</p>
+                </div>              
+            </div>       
         </div>
     </main>
     <!-- Main -->
