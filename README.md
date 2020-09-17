@@ -104,7 +104,8 @@
 
 
 **14)** 9/15/2020  - Instagram
-**14)** 9/16/2020  - Instagram (part2)
+**15)** 9/16/2020  - Instagram (part2) 
+**16)** 9/17/2020  - Instagram (part3) - 반응형 추가
 
 
 
