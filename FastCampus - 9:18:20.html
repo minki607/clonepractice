@@ -22,7 +22,7 @@
     }
 
     :root {
-        --main-background-color: #fafafa;
+        --main-font-color: #ff7450;
         --main-border-color: #dbdbdb;
         --white-fill: #fff;
 
@@ -46,6 +46,10 @@
         display: flex;
         justify-content: space-between;
         padding-top: 30px;
+    }
+
+    #toggle_nav {
+        display: none;
     }
 
     .login_signup > ul{
@@ -143,6 +147,21 @@
         margin-bottom: 35px;
     }
 
+    .best_title{
+        width: 100%;
+        font-weight: 600;
+        color: #424242;
+    }
+
+    .best_title > span {
+        font-size: 0.8rem;
+        margin: 0 10px 0 20px;
+        padding: 0.3rem 0.6rem;
+        border-radius: 0.6rem;
+        background-color: #ff7450;
+        color: #fff;
+    }
+
     .best_sellers > .card {
         flex: 1;
         margin: 20px;
@@ -173,20 +192,26 @@
 
 
      .card_open_date{
-        font-size: 1rem;
+        font-size: 0.8rem;
         position: absolute;
-        top: -10px;
-        left: 5%;
-        background-color: var(--white-fill);
-        color: #ff7450;
+        top: -10%;
+        left: 5%;  
+        display: flex;
         padding: 5px 10px;
         
     }
 
     .card_open_date > .difficulty {
-        display: inline-block;
-        background-color: #ff7450;
+        background-color: var(--main-font-color);
+        padding: 4px;
         color: white;
+    }
+
+    .card_open_date > .register_date {
+        color: var(--main-font-color);
+        padding: 3px;
+        background-color: white;
+        border: 1px solid var(--main-font-color);
     }
 
     .card_content > .tags {
@@ -195,7 +220,7 @@
 
     .card_content > .tags > .tag{
       padding: 8px 10px;
-      background-color: white;
+      background-color: var(--white-fill);
       color: #7f8185;
       border-radius: 25px;
       margin: 10px 10px 0px 0px;
@@ -223,8 +248,94 @@
         font-weight: 300;
     }
 
+     @media only screen and (max-width: 1200px){
+        * {
+            font-size: 11px;
+        }    
+        .navbar_top > .logo {
+            margin-left: 15px;
+
+        }
+        .navbar_bottom > ul{
+            justify-content: center;
+        }
+
+        .jumbotron{
+            height: 250px;
+        }
+
+        .ad_text_container{
+            height: inherit;
+            margin-left: 20px;
+        }
+
+    
+    }
+
+
+    @media only screen and (max-width:600px){
+     
+        .navbar_top {
+            height: 70px;
+            padding: 0; 
+            align-items: center;
+        }
+
+        .navbar_top > .login_signup, .navbar_bottom  {
+            display: none;
+        }
+
+        #toggle_nav {
+            display: block;
+            margin-right: 30px;
+        }
+
+        .best_sellers > .card{
+            display: flex;
+            height: 100px;
+
+        }
+
+        .best_sellers > .card img{
+            width: 100px;
+          
+        
+        }
+        .card {
+            border-bottom: 1px solid #e7e8eb;
+        }
+        .card_content {
+            background-color: var(--white-fill);
+            padding: 15px;
+            height: 100%;
+        }
+
+        .card_content > .tags {
+            display: none;
+        }
+
+        .card_open_date {
+            position: relative;
+            padding: 0 5px;
+            left: 0;
+        }
+
+        .card_open_date > .card_title {
+            font-size: 3rem;
+        }
+
+      
+     
+    
 
    
+    }
+
+   
+ 
+
+
+    
 
     
     
@@ -249,6 +360,7 @@
                             </div>
                         </a>
                     </div> <!--end of logo-->
+                    <i class="fa fa-bars" id='toggle_nav' aria-hidden="true"></i>
                     <div class="login_signup">
                         <ul>
                             <li>
@@ -300,13 +412,14 @@
             </div>
 
             <div class="best_sellers">
+                <h3 class='best_title'><span>BEST</span>이번주 베스트셀링 강의</h3>
                 <div class="card">
                     <div class="card_image">
                         <img src='https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202009/175204-12/active-img-thered-b.png' alt="card_img">
                     </div>
                     
                     <div class="card_content">
-                        <div class="card_open_date"><span class='difficulty'>실전</span> 사전예약</div>
+                        <div class="card_open_date"><span class='difficulty'>실전</span> <span class='register_date'>사전예약</span></div>
                         <h3 class='card-title'>The RED: 데이터 사이언티스트 허용호</h3>
                         <div class="tags">
                             <div class="tag">데이터 실무</div>
@@ -322,6 +435,7 @@
                             <img src="https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202006/113509-11/thumb-card-digitmktg.png" alt="card_img">
                         </div>
                         <div class="card_content">
+                            <div class="card_open_date"><span class='difficulty'>입문 - 실천</span> <span class='register_date'>전체 오픈</span></div>
                             <h3 class='card-title'>디지털 마케팅 MAX 올인원 패키지</h3>
                             <div class="tags">
                                 <div class="tag">데이터 실무</div>
@@ -336,6 +450,7 @@
                                 <img src='https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202004/141052-134/컴포저-카드이미지-uxui.jpg' alt="card_img">
                             </div>
                             <div class="card_content">
+                                <div class="card_open_date"><span class='difficulty'>입문 - 취업</span> <span class='register_date'>11월 2일 개강</span></div>
                                 <h3 class='card-title'>UX/UI 디자인 스쿨 15기</h3>
                                 <div class="tags">
                                     <div class="tag">데이터 실무</div>
