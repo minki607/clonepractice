@@ -112,7 +112,11 @@
 	한달뒤 다니게 될 코딩스쿨을 클론 해보았다.
 
 **18)** 9/19/2020  - FastCampus (코딩스쿨) (part2) - 카드, 배너 추가 
-**19)** 9/19/2020  - FastCampus (코딩스쿨) (part3) - 카드 html css 추가 및 전체 웹 반응형 추가
+**19)** 9/20/2020  - FastCampus (코딩스쿨) (part3) - 카드 html css 추가 및 전체 웹 반응형 추가
+
+**20)** 9/21/2020  - Github - navbar, tab 추가
+
+	자주 쓰이는 sticky navbar를 구현해봤다. 항상 --webkit (파이어폭스, 인터넷 익스플로러 지원) 다음에 position: sticky를 지정할것!
 
 
 
