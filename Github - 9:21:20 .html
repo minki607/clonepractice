@@ -80,7 +80,6 @@
   position: -webkit-sticky;
   position: sticky;
   background: var(--white-fill);
-
   top: 0;
 
 }
@@ -120,6 +119,183 @@
 
 .border {
   border-bottom: 0.5px solid var(--border-color);
+}
+
+.left {
+  flex: 1;
+  margin: 0 35px 0 0;
+}
+
+.right {
+  flex: 3;
+}
+
+
+.tab {
+  max-width: 1200px;
+  margin: 15px 0 0;
+  padding: 15px 0 15px;
+  display: flex;
+}
+
+.tab a {
+  margin: 0;
+  padding: 0 15px 17px;
+  color: #1b1f23;
+  font-size: 0.8rem;
+}
+
+.tab a.active {
+  border-bottom: 2px solid #f9826c;
+  font-weight: 600;
+}
+
+.tab a:hover {
+  border-bottom: 2px solid #D1D5DA;
+}
+
+.border {
+  border-bottom: 0.5px solid var(--border-color);
+}
+
+.overview {
+  display: flex;
+  min-height: 100vh;
+}
+
+.profile-text {
+  width: 250px; 
+
+}
+
+.profile-links {
+  margin-top: 15px;
+}
+
+.profile-links a {
+  color: #1b1f23;
+  font-size: 0.8em;
+}
+
+.overview .left div {
+  line-height: 2.5em;
+}
+
+.overview > .left > img {
+  position: relative;
+  top: -25px;
+  width: 250px;
+  height: 250px;
+  background: rgb(206, 206, 206);
+  border-radius: 500px;
+}
+
+.overview .right {
+  margin-top: 10px;
+}
+
+.overview  h1 {
+  font-size: 1.25em;
+  font-weight: 800;
+  line-height: 24px;
+  color: #666666;
+}
+
+.overview h2 {
+  font-size: 0.8em;
+  color: black;
+  margin: 20px 0 10px;
+  font-weight: 500;
+
+}
+
+.edit-profile-btn {
+    background-color: #fafbfc;
+    width: 100%;
+    margin: 0 5px;
+    padding: 5px;
+
+    border-radius: 5px;
+    border-color: rgba(27,31,35,.15);
+}
+
+#mail, #personal-links {
+  line-height: 1.0em;
+}
+
+.org img{
+    width: 25px;
+    height: 25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 15px;
+}
+
+.grid-item {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 16px;
+  min-height: 120px;
+}
+
+.grid-item div {
+  margin: 8px 0;
+}
+
+.repo {
+  color: #0366d6;
+  font-weight: 600;
+}
+
+.repo-desc, .language{
+  font-size: 0.8em;
+  color: #586069;
+}
+
+.language {
+  padding-top: 15px;
+}
+
+.language-color-react, .language-color-js, .language-color-html {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.language-color-react {
+  background-color: rgb(140, 140, 247);
+}
+
+.language-color-js {
+  background-color: rgb(221, 221, 63);
+}
+
+.language-color-html{
+  background-color: rgb(250, 67, 67);
+}
+
+
+.inner-container {
+  display: flex;
+}
+
+.inner-left {
+  flex: 5;
+}
+
+.inner-left .graph {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.inner-right {
+  flex: 1;
 }
 
 
@@ -173,8 +349,115 @@
       </nav>
     </div>
   </div>
+  </div>
 
-   
+  <main class="container">
+    <div class="overview">
+      <div class="left">
+        <img class='profile' src="https://avatars3.githubusercontent.com/u/40879385?s=460&u=0dac8fa95e14c6ba52711b34f6637e3fbbd7fd8a&v=4"
+          alt="profile-img">
+        <div class="profile-text">
+          <h1>Min Gee</h1>
+          <div>minki607</div>
+          <button class='edit-profile-btn'>Edit Profile</button>
+          <div class='profile-links'>
+            <div id="mail">
+              <svg viewBox="0 0 16 16" version="1.1" width="16" height="16" fill='#6a737d'aria-hidden="true">
+                <path fill-rule="evenodd" d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"></path>
+              </svg>
+              <a href='#'>suh@student.unimelb.edu.au</a>
+            </div>
+            <div id='personal-links'>
+              <svg viewBox="0 0 16 16" version="1.1" width="16" height="16" fill='#6a737d' aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+              </svg>
+              <a href='#'>http://portfolio-min.s3-website....</a>
+            </div>
+          </div>
+          <h2>Organization</h2>
+          <div class='org'>
+            <a href='#'>
+              <img src='https://avatars2.githubusercontent.com/u/53994331?s=60&v=4' alt='org'>
+  
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div>
+          <h2> Popular Repositories </h2>
+          <div class="grid-container">
+            <div class="grid-item">
+              <div>
+                <a href="/" class="repo"> first - react </a>
+              </div>
+              <div class="repo-desc"> my first react app </div>
+              <div class="language">
+                <span class='language-color-react'></span>React</div>
+      
+            </div>
+            <div class="grid-item">
+              <div>
+                <a href="/" class="repo"> burger app </a>
+              </div>
+              <div class="repo-desc"> react </div>
+              <div class="language">
+                <span class='language-color-react'></span>React</div>
+            </div>
+            <div class="grid-item">
+              <div>
+                <a href="/" class="repo"> workshop 5</a>
+              </div>
+              <div class="repo-desc"> React workshop </div>
+              <div class="language">
+                <span class='language-color-react'></span>React</div>
+      
+            </div>
+            <div class="grid-item">
+              <div>
+                <a href="/" class="repo"> Stream </a>
+              </div>
+              <div class="repo-desc"> Streaming App with React </div>
+              <div class="language">
+                <span class='language-color-js'></span>Javascript</div>
+      
+            </div>
+            <div class="grid-item">
+              <div>
+                <a href="/" class="repo">Artifact Register </a>
+              </div>
+              <div class="repo-desc"> Project </div>
+              <div class="language">
+                <span class='language-color-react'></span>React</div>
+      
+            </div>
+            <div class="grid-item">
+              <div>
+                <a href="/" class="repo">TRANSDOO</a>
+              </div>
+              <div class="repo-desc">TRANSLATION APP </div>
+              <div class="language">
+                <span class='language-color-html'></span>HTML</div>
+            </div>
+          </div>
+          <div class="inner-container">
+            <div class="inner-left">
+              <div>
+                <h2>63 Contribution in the last year</h2>
+      
+              </div>
+              <div>
+                <h2> Contribution activity </h2>
+      
+              </div>
+            </div>
+            <div class="inner-right">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </main>
 
 
 </body>
