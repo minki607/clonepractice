@@ -32,271 +32,338 @@
     }
 
 
-.navbar {
-  background: var(--nav-black);
-  color: var(--white-fill);
-  display: flex;
-  align-items: center;
-  height: 50px;
-}
+    .navbar {
+      background: var(--nav-black);
+      color: var(--white-fill);
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
 
-.navbar > ul {
-    display: flex;
-}
-.navbar > ul > li {
-  font-size: 0.8rem;
-  margin: 0 10px;
-}
+    .navbar > ul {
+        display: flex;
+    }
+    .navbar > ul > li {
+      font-size: 0.8rem;
+      margin: 0 10px;
+    }
 
-.navbar a {
-  color: var(--white-fill);
-}
+    .navbar a {
+      color: var(--white-fill);
+    }
 
-.navbar nav {
-  display: inline-block;
-  font-weight: bold;
-}
+    .navbar nav {
+      display: inline-block;
+      font-weight: bold;
+    }
 
-.navbar .logo {
-    margin: 0 10px 0 20px;
-}
+    .navbar .logo {
+        margin: 0 10px 0 20px;
+    }
 
-.navbar .search-form {
-    background-color: #3f4448;
-    padding: 3px 10px;
-    border-radius: 5px;
-}
+    .navbar .search-form {
+        background-color: #3f4448;
+        padding: 3px 10px;
+        border-radius: 5px;
+    }
 
-.search-form::placeholder {
-    color: #aeb1b3;
-}
+    .search-form::placeholder {
+        color: #aeb1b3;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.sticky-nav {
-  position: -webkit-sticky;
-  position: sticky;
-  background: var(--white-fill);
-  top: 0;
+    .sticky-nav {
+      position: -webkit-sticky;
+      position: sticky;
+      background: var(--white-fill);
+      top: 0;
 
-}
+    }
 
-.left {
-  flex: 1;
-  margin: 0 35px 0 0;
-}
+    .left {
+      flex: 1;
+      margin: 0 35px 0 30px;
+    }
 
-.right {
-  flex: 3;
-}
-
-
-.tab {
-  max-width: 1200px;
-  margin: 15px 0 0;
-  padding: 15px 0 15px;
-  display: flex;
-}
-
-.tab a {
-  margin: 0;
-  padding: 0 15px 17px;
-  color: #1b1f23;
-  font-size: 0.8rem;
-}
-
-.tab a.active {
-  border-bottom: 2px solid #f9826c;
-  font-weight: 600;
-}
-
-.tab a:hover {
-  border-bottom: 2px solid #D1D5DA;
-}
-
-.border {
-  border-bottom: 0.5px solid var(--border-color);
-}
-
-.left {
-  flex: 1;
-  margin: 0 35px 0 0;
-}
-
-.right {
-  flex: 3;
-}
+    .right {
+      flex: 3;
+    }
 
 
-.tab {
-  max-width: 1200px;
-  margin: 15px 0 0;
-  padding: 15px 0 15px;
-  display: flex;
-}
+    .tab {
+      max-width: 1200px;
+      margin: 15px 0 0;
+      padding: 15px 0 15px;
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-.tab a {
-  margin: 0;
-  padding: 0 15px 17px;
-  color: #1b1f23;
-  font-size: 0.8rem;
-}
+    .tab a {
+      margin: 0;
+      padding: 0 15px 17px;
+      color: #1b1f23;
+      font-size: 0.8rem;
+    }
 
-.tab a.active {
-  border-bottom: 2px solid #f9826c;
-  font-weight: 600;
-}
+    .tab a.active {
+      border-bottom: 2px solid #f9826c;
+      font-weight: 600;
+    }
 
-.tab a:hover {
-  border-bottom: 2px solid #D1D5DA;
-}
+    .tab a:hover {
+      border-bottom: 2px solid #D1D5DA;
+    }
 
-.border {
-  border-bottom: 0.5px solid var(--border-color);
-}
+    .border {
+      border-bottom: 0.5px solid var(--border-color);
+    }
 
-.overview {
-  display: flex;
-  min-height: 100vh;
-}
+    .left {
+      flex: 1;
+      margin: 0 35px 0 30px;
+    }
 
-.profile-text {
-  width: 250px; 
-
-}
-
-.profile-links {
-  margin-top: 15px;
-}
-
-.profile-links a {
-  color: #1b1f23;
-  font-size: 0.8em;
-}
-
-.overview .left div {
-  line-height: 2.5em;
-}
-
-.overview > .left > img {
-  position: relative;
-  top: -25px;
-  width: 250px;
-  height: 250px;
-  background: rgb(206, 206, 206);
-  border-radius: 500px;
-}
-
-.overview .right {
-  margin-top: 10px;
-}
-
-.overview  h1 {
-  font-size: 1.25em;
-  font-weight: 800;
-  line-height: 24px;
-  color: #666666;
-}
-
-.overview h2 {
-  font-size: 0.8em;
-  color: black;
-  margin: 20px 0 10px;
-  font-weight: 500;
-
-}
-
-.edit-profile-btn {
-    background-color: #fafbfc;
-    width: 100%;
-    margin: 0 5px;
-    padding: 5px;
-
-    border-radius: 5px;
-    border-color: rgba(27,31,35,.15);
-}
-
-#mail, #personal-links {
-  line-height: 1.0em;
-}
-
-.org img{
-    width: 25px;
-    height: 25px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 15px;
-}
-
-.grid-item {
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 16px;
-  min-height: 120px;
-}
-
-.grid-item div {
-  margin: 8px 0;
-}
-
-.repo {
-  color: #0366d6;
-  font-weight: 600;
-}
-
-.repo-desc, .language{
-  font-size: 0.8em;
-  color: #586069;
-}
-
-.language {
-  padding-top: 15px;
-}
-
-.language-color-react, .language-color-js, .language-color-html {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
-.language-color-react {
-  background-color: rgb(140, 140, 247);
-}
-
-.language-color-js {
-  background-color: rgb(221, 221, 63);
-}
-
-.language-color-html{
-  background-color: rgb(250, 67, 67);
-}
+    .right {
+      flex: 3;
+    }
 
 
-.inner-container {
-  display: flex;
-}
+    .tab {
+      max-width: 1200px;
+      margin: 15px 0 0;
+      padding: 15px 0 15px;
+      display: flex;
+    }
 
-.inner-left {
-  flex: 5;
-}
+    .tab a {
+      margin: 0;
+      padding: 0 15px 17px;
+      color: #1b1f23;
+      font-size: 0.8rem;
+    }
 
-.inner-left .graph {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
+    .tab a.active {
+      border-bottom: 2px solid #f9826c;
+      font-weight: 600;
+    }
 
-.inner-right {
-  flex: 1;
-}
+    .tab a:hover {
+      border-bottom: 2px solid #D1D5DA;
+    }
+
+    .border {
+      border-bottom: 0.5px solid var(--border-color);
+    }
+
+    .overview {
+      display: flex;
+      min-height: 100vh;
+      flex-wrap: wrap;
+    }
+
+    .profile-text {
+      width: 250px; 
+
+    }
+
+    .profile-links {
+      margin-top: 15px;
+    }
+
+    .profile-links a {
+      color: #1b1f23;
+      font-size: 0.8em;
+    }
+
+    .overview .left div {
+      line-height: 2.5em;
+    }
+
+    .overview > .left .profile-main > img {
+      position: relative;
+      top: -25px;
+      max-width: 250px;
+      max-height: 250px;
+      width: calc(25vw - 10px);
+      height: calc(25vw - 10px);
+      background: rgb(206, 206, 206);
+      border-radius: 500px;
+    }
+
+    .overview .right {
+      margin-top: 10px;
+    }
+
+    .overview  h1 {
+      font-size: 1.25em;
+      font-weight: 800;
+      line-height: 2em;
+      color: #666666;
+    }
+
+    .profile-name-id h1 {
+      line-height: 0;
+    }
+
+    .overview h2 {
+      font-size: 0.8em;
+      color: rgb(99, 99, 99);
+      margin: 20px 0 10px;
+      font-weight: 500;
+      line-height: 0;
+
+    }
+
+    .edit-profile-btn {
+        background-color: #fafbfc;
+        width: 100%;
+        margin: 0 5px;
+        padding: 5px;
+
+        border-radius: 5px;
+        border-color: rgba(27,31,35,.15);
+    }
+
+    #mail, #personal-links {
+      line-height: 1.0em;
+    }
+
+    .org img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 20px;
+      grid-row-gap: 15px;
+    }
+
+    .grid-item {
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 16px;
+      min-height: 120px;
+    }
+
+    .grid-item div {
+      margin: 8px 0;
+    }
+
+    .repo {
+      color: #0366d6;
+      font-weight: 600;
+    }
+
+    .repo-desc, .language{
+      font-size: 0.8em;
+      color: #586069;
+    }
+
+    .language {
+      padding-top: 15px;
+    }
+
+    .language-color-react, .language-color-js, .language-color-html {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .language-color-react {
+      background-color: rgb(140, 140, 247);
+    }
+
+    .language-color-js {
+      background-color: rgb(221, 221, 63);
+    }
+
+    .language-color-html{
+      background-color: rgb(250, 67, 67);
+    }
+
+
+    .inner-container {
+      display: flex;
+    }
+
+    .inner-left {
+      flex: 5;
+    }
+
+    .inner-left .graph {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    .inner-right {
+      flex: 1;
+    }
+
+    @media only screen and (max-width: 550px) {
+      .navbar {
+        justify-content: center;
+      }
+      .navbar > .search-form {
+        display: none;
+      }
+
+      .navbar > ul {
+        display: none;
+      }
+
+      .navbar .logo {
+        justify-content: center;
+      }
+
+      .sticky-nav {
+        display: none;
+      }
+
+      .overview {
+        margin-top: 50px;
+      }
+
+      .left {
+        width: 100%;
+        
+
+      }
+      .right {
+        width: 100%;
+        margin: 0 15px;
+      }
+
+      .profile-main {
+        display: flex;  
+      }
+
+      .profile-name-id {
+        margin-left: 10px;
+      }
+
+      .profile-name-id h1 {
+        line-height: 0.3;
+      }
+
+      .profile-name-id h3{
+        color: gray;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 15px;
+      }
+    }
 
 
 </style>
@@ -354,11 +421,16 @@
   <main class="container">
     <div class="overview">
       <div class="left">
-        <img class='profile' src="https://avatars3.githubusercontent.com/u/40879385?s=460&u=0dac8fa95e14c6ba52711b34f6637e3fbbd7fd8a&v=4"
-          alt="profile-img">
+
+        <div class="profile-main">
+          <img src="https://avatars3.githubusercontent.com/u/40879385?s=460&u=0dac8fa95e14c6ba52711b34f6637e3fbbd7fd8a&v=4" alt="profile-img">
+                <div class="profile-name-id">
+                    <h1>Min Gee</h1>
+                    <h2>minki607</h2>
+                </div>
+          </div>
         <div class="profile-text">
-          <h1>Min Gee</h1>
-          <div>minki607</div>
+         
           <button class='edit-profile-btn'>Edit Profile</button>
           <div class='profile-links'>
             <div id="mail">
