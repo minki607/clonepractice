@@ -122,7 +122,11 @@
 **22)** 9/23/2020  - Github (part3) - 모바일 반응 추가
 
 **23)** 9/24/2020  - Microsoft Learn (part1) - 네비게이션 및 헤더 추가
-**23)** 9/25/2020  - Microsoft Learn (part2) - 카드추가 및 모바일 반응 추가
+**24)** 9/25/2020  - Microsoft Learn (part2) - 카드추가 및 모바일 반응 추가
+
+**25)** 9/26/2020  - MongoDB (part1) - sticky 네비게이션 및 헤더
+
+
 
 
 	
