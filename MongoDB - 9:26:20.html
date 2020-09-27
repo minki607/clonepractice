@@ -46,18 +46,15 @@
         height: 20px;
     }
 
-    .event-notification img:first-child {
-        margin-right: 15px;
-    }
-
-    .event-notification img:last-child {
-        margin-left: 15px;
+    .event-notification img {
+        margin: 0 15px;
     }
 
     .event-notification h2 {
         color: var(--white--color);
         font-size: 1rem;
         font-weight: 500;
+        margin: 5px 0px;
     }
 
     .navbar {
@@ -100,7 +97,12 @@
         flex: 1;
     }
 
+    .navbar > .right-menu li:last-child{
+        display: none;
+    }
+
     .btn {
+       
         background-color: var(--mongodb-primary-color);
         padding: 10px 30px;
         border-radius: 5px; 
@@ -125,7 +127,7 @@
         text-align: center;
         background-color: var(--white--color);
         margin-top: 20  px;
-        padding: 95px;
+        padding: 3rem;
     }
 
     .text-container h1 {
@@ -148,6 +150,12 @@
         margin-bottom: 30px;
     }
 
+    .block-btn {
+        display: block;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
     .chat-button {
         position: fixed;
         right: 30px;
@@ -155,9 +163,55 @@
         padding: 30px;
         background-color: var(--mongodb-primary-color);
         border-radius: 50px;
-}
+    }
 
 
+
+    @media only screen and (max-width: 940px){
+
+         .event-notification {
+             min-height: 50px;
+             text-align: center;
+        
+        }
+         .navbar > .left-menu  {
+             display: none;
+         }
+
+         .navbar > .right-menu li:not(:last-child) {
+             display: none;
+         }
+         
+         .show-more {
+             height:15px;
+             width: 20px;
+         }
+
+      
+
+
+    }
+
+    @media only screen and (max-width: 550px){
+        
+         .text-container h1 {
+             font-size: 2em;    
+         }
+
+          .text-container h2 {
+            font-size: 1em;
+         }
+
+        .text-container {
+             max-width: 300px;
+             padding: 2rem;
+         }
+
+         .block-btn {
+             max-width: inherit;
+             width: 100%;
+         }
+    }
 
     
 </style>
@@ -205,6 +259,26 @@
             <li>
                 <a href='#' class='btn'>Try Free</a>
             </li>
+            <li>
+                <a href='#'>
+                    <svg class='show-more'>
+                        <use href="#icon-chevron_down"></use>
+                        <symbol id="icon-chevron_down" viewBox="0 0 32 32">
+                            <path fill="none" stroke="#13aa52" style="stroke: var(--color2, #13aa52)" stroke-linejoin="round" stroke-linecap="round"
+                                stroke-miterlimit="4" stroke-width="3" d="M0.667 8.333l15.333 15.334 15.333-15.334"></path>
+                        </symbol>
+                        <symbol id="icon-chevron_down" viewBox="0 0 32 32">
+                            <path fill="none" stroke="#13aa52" style="stroke: var(--color2, #13aa52)" stroke-linejoin="round" stroke-linecap="round"
+                                stroke-miterlimit="4" stroke-width="3" d="M0.667 8.333l15.333 15.334 15.333-15.334"></path>
+                        </symbol>
+                        <symbol id="icon-chevron_down" viewBox="0 0 32 32">
+                            <path fill="none" stroke="#13aa52" style="stroke: var(--color2, #13aa52)" stroke-linejoin="round" stroke-linecap="round"
+                                stroke-miterlimit="4" stroke-width="3" d="M0.667 8.333l15.333 15.334 15.333-15.334"></path>
+                        </symbol>
+                    </svg>
+                </a>
+            </li>
+
         </ul>
     </nav>
 
@@ -214,15 +288,21 @@
             <h2>MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.</h2>
             <h2>No database makes you more productive.</h2>
             <h3> <img alt="leaf-icon" src="https://webassets.mongodb.com/_com_assets/cms/leaf-2g1s5txorx.svg"> Try MongoDB free in the cloud!</h3>
-            <a class='btn' href='#'>Start Free</a>
+            <a class='btn block-btn' href='#'>Start Free</a>
         </div>
 
     </header>
 
     <div class="chat-button">
-         
+       
     </div>
 
+    <div class="seperator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <polygon points="100 0 100 10 0 10"' fill='#c7c7c7' />
+        </svg>
+    </div>
+  
 </body>
 
 <script>
