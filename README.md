@@ -127,6 +127,15 @@
 **25)** 9/26/2020  - MongoDB (part1) - sticky 네비게이션 및 헤더
 **26)** 9/27/2020  - MongoDB (par2) - svg추가 폰트, 세부레이아웃 조정 및 모바일 반응 추가
 
+**27)** 9/28/2020  - Melbourne University (part1) 
+
+		대학시절 자주쓰던 모교 웹 클론을 시작 해보았다. 내용이 많아 헤더를 필요한 중요한 부분만 구현해보려고한다. 
+		header안에 text가 화면 크기에 따라 위치 변경을 해야하기 때문에 부모요소에 relative를 주고 text-container 요소에 
+		left: calc(50% + 3.5rem) 값을 줬다.
+
+
+
+
 
 
 
