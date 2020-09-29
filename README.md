@@ -133,6 +133,11 @@
 		header안에 text가 화면 크기에 따라 위치 변경을 해야하기 때문에 부모요소에 relative를 주고 text-container 요소에 
 		left: calc(50% + 3.5rem) 값을 줬다.
 
+**28)** 9/29/2020  - Melbourne University (part2) 
+
+		card부분 추가 및 hover 이펙트. transition 과 transform 이용해 매끄러운 이펙트 구현.
+
+
 
 
 

@@ -25,6 +25,8 @@
     --primary-color: #094183;
     --secondary-color: #adcdf0;
     --white-fill: #fff;
+    --dark-blue: #012a58;
+    --paragraph-text: #272727;
   }
 
 
@@ -162,6 +164,88 @@
     margin-left: 10px;
     fill: var(--primary-color);
   }
+
+  .event-cards {
+    height: 300px;
+    background-color: var(--dark-blue);
+    display:flex;
+    align-items: center;
+
+  }
+
+  .card-container {
+    display: flex;
+    margin: 0 auto;
+
+  }
+
+  .card-container > .card {
+    width: 33.3333%;
+    background-color: var(--white-fill);
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 5px;
+    margin: 15px;
+  
+  }
+
+  .button-color-teal{
+    background-color: #cbe8ef;
+    border-left: 6px solid #3fa7c2;
+  }
+
+  .button-color-yelgreen{
+    background-color: #f3f8d7;
+    border-left: 6px solid #a1d172;
+  }
+
+  .button-color-orange{
+    background-color: #ffdcba;
+    border-left: 6px solid #e77052;
+  }
+
+
+  .button-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem;
+      border-radius: 3px;
+      color: var(--paragraph-text);
+      box-shadow: 0 0 6px #00000040;
+      margin: -5px;
+  }
+
+  .button-link:hover .card-title{
+    text-decoration: underline;
+  }
+
+  .button-link:hover i:last-child{
+    transition: all 0.1s;
+    transform: translateX(5px)
+  }  
+
+
+
+.button-link p {
+  flex: 1;
+  margin-left:10px;
+}
+
+.button-link i {
+  color: var(--paragraph-text);
+}
+
+.card-text {
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    color: rgb(39, 39, 39);
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    min-height: 80px;
+}
+
 </style>
 
 <body>
@@ -227,9 +311,48 @@
     </div>
   </header>
 
+  <div class="event-cards">
+    <div class="card-container">
+        <div class="card">
+            <a href="#" class="button-link button-color-teal">
+              <i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+              <p class="card-title"> Undergraduate applications </p> 
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <p class="card-text">
+              Undergraduate applications close 30 Sept. Find out more about student life at Melbourne and how to apply.
+            </p>
+          </div>
+      
+          <div class="card">
+              <a href="#" class="button-link button-color-yelgreen">
+                <i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                <p class="card-title"> Access Melbourne </p> 
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </a>
+              <p class="card-text">
+                  Applications for our special entry access scheme close 5pm AEST 9 October. Find out if you’re eligible for additional consideration.
+              </p>
+            </div>
+      
+            <div class="card">
+                <a href="#" class="button-link button-color-orange">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  <p class="card-title"> Coronavirus updates </p> 
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <p class="card-text">
+                    Access updates about the University’s coronavirus (COVID-19) response
+                </p>
+              </div>
+    </div>
+
+   
+  </div>
+
   
 
-
+</body>
 
 
 
