@@ -94,8 +94,12 @@
   .right-bottom li a:hover {
     border-bottom: 3px solid var(--secondary-color);
   }
+  
+  .nav-more {
+    display: none;
+  }
 
-  .search {
+  .search, .nav-more {
     background-color: var(--primary-color);
     cursor: pointer;
     outline: none;
@@ -225,8 +229,6 @@
     transform: translateX(5px)
   }  
 
-
-
 .button-link p {
   flex: 1;
   margin-left:10px;
@@ -245,6 +247,88 @@
     margin: 1rem;
     min-height: 80px;
 }
+
+
+  @media only screen and (max-width:800px){
+
+    .right-top, .right-bottom, .search{
+      display: none;
+    }
+
+    .nav-more {
+      display: block;
+      color: white;
+      font-size: 1.5rem;
+
+    }
+
+
+  .jumbo-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
+
+  .jumbo-container>.campaign-image {
+    width: 100%;
+
+  }
+
+  .text-container {
+    max-width: 300px;
+    left: calc(50% + 1rem);
+  }
+
+  .text-container h2 {
+    font-size: 1em;
+  }
+
+  .text-container h3 {
+    font-size: 0.6em;
+  }
+
+  .apply-btn {
+    padding: 5px;
+    font-size: 0.5em;
+  }
+
+
+  .event-cards{
+    position: relative;
+  }
+  
+  .card-container {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin:5px 0px;
+
+  }
+
+  .card-container > .card {
+    width: 100%;
+    max-width: none;
+    margin: 10px 0px;
+
+  }
+
+  .card-text{
+    display: none;;
+  }
+
+  .button-link {
+    margin: 0 auto;
+  }
+
+  }
+
+
 
 </style>
 
@@ -294,6 +378,7 @@
           <path d="M7.148 6.29h-.454l-.157-.158c.557-.65.896-1.493.896-2.416C7.433 1.664 5.77 0 3.716 0 1.664 0 0 1.664 0 3.716 0 5.77 1.664 7.432 3.716 7.432c.923 0 1.766-.338 2.416-.895l.158.157v.453L9.147 10 10 9.148zm-3.432 0c-1.42 0-2.572-1.153-2.572-2.574 0-1.42 1.15-2.573 2.572-2.573S6.29 2.295 6.29 3.716c0 1.42-1.153 2.573-2.574 2.573z"></path>
         </svg>
       </button>
+      <button class='nav-more'><i class="fa fa-bars" aria-hidden="true"></i></button>
     </div>
   </nav>
   <!--end of nav-->

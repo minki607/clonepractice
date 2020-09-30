@@ -138,6 +138,11 @@
 		card부분 추가 및 hover 이펙트. transition 과 transform 이용해 매끄러운 이펙트 구현.
 
 
+**29)** 9/30/2020  - Melbourne University (part3) 
+
+		모바일 반응 추가 (카드 모양, 네이게이션, 폰트 크기)
+
+
 
 
 
