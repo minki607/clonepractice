@@ -142,6 +142,12 @@
 
 		모바일 반응 추가 (카드 모양, 네이게이션, 폰트 크기)
 
+**30)** 10/1/2020  - Apple 
+
+		보통 nav를 만들때 ul 이나 li에게는 클래스를 주지않고 child selector로 css를 입혔는데 (.navbar > ul > li) 가독성이 많이 떨어지고 코드 수정에 어려움이 있읅수 있다는 지적을 받아
+		앞으로는 nav-link nav-item 이런식으로 클래스를 주려고한다. 이런 구조는 bootstrap 같은 css framework에서도 자주 보였던거 같다.
+		
+
 
 
 
