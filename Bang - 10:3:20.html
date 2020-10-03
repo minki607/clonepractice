@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <title>Bang Olufesen</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: "Gotham A", "Gotham B", Arial, Helvetica, sans-serif;
+    }
+
+     :root{
+        --main-color: #fff;
+
+    }
+
+    .bang-olf-video {
+        position: absolute;
+        height: 100vh;
+    
+    }
+
+    .overlay-container {
+        max-width: 1500px;
+        margin: 0 auto;
+        position: relative;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.568);
+
+    }
+
+
+
+    .nav-list {
+        display: flex;
+    }
+
+    .top {
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .bottom {
+        justify-content: center;       
+    }
+
+    .bottom > .nav-item {
+        font-size: 0.7rem;
+    }
+
+    .bottom > .nav-item >.nav-link {
+        padding: 0 4em;
+    }
+
+    .nav-link {
+        color: var(--main-color);
+    }
+
+    .nav-item{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--main-color);
+        text-align: center;
+    }
+
+    .text-container p {
+        font-weight: 600;
+    }
+
+    .text-container h1 {
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: 15px 0;
+        font-weight: 100;
+        font-size: 2.5em;
+    }
+
+    .text-container h2{
+        font-weight: 200;
+        font-size: 1.2em;
+
+    }
+
+    .text-container > .shop-now {
+        margin-top: 25px;
+        padding: 10px 0px;;
+        min-width: 250px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+    }
+
+    .shop-now:hover{
+        background-color: white;
+        color: black;
+    }
+
+
+
+
+
+
+
+</style>
+
+<body>
+
+    
+    <video data-vjs-player="true" class="bang-olf-video" id="vjs_video_1082_html5_api" tabindex="-1" loop="" muted="muted" playsinline="playsinline" autoplay="" src="//videos.ctfassets.net/8cd2csgvqd3m/3UyaPTyI0dbBZNnG6Pwhwf/08ac4164f23f23e32712fddaf43bcf96/Beoplay_H95_desktop_home.mp4"></video>
+    <div class="overlay-container">
+        <nav class="navbar">
+            <ul class="nav-list top">
+                <li class="nav-item more-icon">
+                    <a href='#' class='nav-link'>
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item logo">
+                    <a href='#' class='nav-link'>
+                        <img src='//images.ctfassets.net/8cd2csgvqd3m/4JdKzu629zMIigR4O0AUGW/60ca2254d3cf4ed943ead8a12b947f8f/primary-logo-white.svg' alt='Bang-Olf-Logo'>
+                    </a>
+                </li>
+               <li class="nav-item shop">
+                   <a href='#' class='nav-link'>
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                   </a>
+               </li>
+            </ul>  
+            <ul class="nav-list bottom">
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        스피커
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        헤드폰
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        TV
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        액세사리
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        스토리
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="text-container">
+            <p>BEOPLAY H95</p>
+            <h1>완벽한 노이즈 캔슬링</h1>
+            <h2>어댑티브 ANC를 통해 나만의 사운드 공간에서 강렬한 사운드에 빠질 수 있습니다.</h2>
+            <button class='shop-now'>쇼핑하기</button>
+        </div>
+    </div>        
+
+</body>
+<script>
+
+</script>
+
+</html>
