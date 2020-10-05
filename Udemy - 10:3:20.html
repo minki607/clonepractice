@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <title>Udemy</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: Helvetica,Arial,sans-serif;
+    }
+
+     :root{
+        --main-color: #fff;
+        --primary-green: #0e7c90;
+        --border-color :#dcdacb;
+        --font-color :#3c3b37;
+        --light-gray: #fbfbf9;
+
+    }
+
+    .mobile-icon {
+        display: none;
+    } 
+
+    .navbar {
+        background-color: var(--main-color);
+        
+    }
+
+    .top {
+        height: 70px;
+        border-bottom: 1px solid var(--border-color);
+
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;    
+    }
+
+     .nav-link{
+        font-size: 0.8em;
+        color: #3c3b37;
+        padding: 15px;
+    }
+
+    .search-item {
+        flex-grow: 1;
+    }
+
+    form .form-container {
+        display: flex;
+        height: 40px;
+        
+        width: 100%;
+        
+    }
+
+    form input {
+        flex-grow: 1;
+        background-color: var(--light-gray);
+        background-image: url(https://raw.githubusercontent.com/ironhack-labs/lab-html-exercise/master/images/magnifying-glass.png);
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position: 10px;
+        width: 100%;
+        min-width: 200px;
+        padding-left: 40px;
+        padding-right: 30px;
+        letter-spacing: .5px;
+        border: 1px solid gray;
+        border-radius: 50px;
+   
+  }
+
+  .top-right-menu {
+      margin-right: 15px;
+      flex-shrink: 0;
+  }
+
+  .top-right-menu i {
+      font-size: 1.5em;
+  }
+  .top-right-menu > button {
+      min-width: 100px;
+      padding: 10px 25px;
+      border-radius: 5px;
+      border: 1px solid var(--primary-green);
+  }
+
+  .log-in {
+      color:var(--primary-green);
+  }
+
+  .sign-up {
+      background-color: var(--primary-green);
+      color: var(--main-color);
+  }
+
+
+
+
+</style>
+
+<body>
+    <div class="overlay-container">
+        <nav class="navbar">
+            <ul class="nav-list top">
+                <li class="nav-item mobile-icon">
+                    <a href='#' class='nav-link'>
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item logo">
+                    <a href='#' class='nav-link'>
+                        <img src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg" alt="Udemy-lgo" width="110" height="32">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        Categories
+                    </a>
+                </li>
+                <li class="nav-item search-item">
+                    <form class="search-form">
+                        <div class="form-container">          
+                            <input type="text" name="search" placeholder="Search for anything">
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        Udemy for Business
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href='#' class='nav-link'>
+                        Teach on Udemy
+                    </a>
+                </li>
+
+               <li class="nav-item top-right-menu">
+                   <a href='#' class='nav-link'>
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                   </a>
+                   <button class='log-in'>Log in</button>
+                   <button class='sign-up'>Sign up</button>
+               </li>
+            </ul>  
+    
+        </nav>
+
+</body>
+
+</html>
