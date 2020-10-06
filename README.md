@@ -160,6 +160,7 @@
 		모바일 반응 및 일정량 스크롤시 element의 opacity가 감소하며 결국엔 사라지도록 jquery추가 (scrollTop 사용)
 
 **34)** 10/5/2020  - Udemy - Udemy 네비게이션 추가
+**35)** 10/6/2020  - Udemy - Udemy (part2) 헤더 섹션 추가
 				
 
 

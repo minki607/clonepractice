@@ -24,6 +24,7 @@
         --main-color: #fff;
         --primary-green: #0e7c90;
         --border-color :#dcdacb;
+        --darker-border: #989586;
         --font-color :#3c3b37;
         --light-gray: #fbfbf9;
 
@@ -108,6 +109,82 @@
       color: var(--main-color);
   }
 
+  .container {
+      max-width: 1300px;
+      margin: 0 auto;
+  }
+
+  .jumbotron {
+    background-image: url('https://img-b.udemycdn.com/notices/home_banner/image_udlite/c6ba0012-5d19-4adf-b4f8-dd26d5f9dba3.jpg?secure=SAR6kop5PeEQB2410RJ3cw%3D%3D%2C1602070575');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+  }
+
+  .text-container {
+      background-color: var(--main-color);
+      max-width: 400px;
+      margin-left: 3em;
+      color: var(--font-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .texts {
+      margin: 2em;
+  }
+
+  .texts > h1,   .texts > p {
+      margin-bottom: 10px;
+  }
+
+  .texts > .text-search {
+      width: 100%;
+      height: 45px;
+      padding: 15px;
+      border: 1px solid var(--darker-border);
+  }
+
+  .courses-section{
+      margin: 5em 2em 5em 2em
+    
+  }
+
+  .section-title h2 {
+      margin-bottom: 10px;
+  }
+
+  .section-title {
+      margin-bottom: 30px;
+  }
+
+  .section-title p{
+      color: gray;
+  }
+
+  .course-nav{
+      border-bottom: 1px solid var(--border-color);
+  }
+
+  .course-nav .nav-link{
+      font-size: 1em;
+      color: gray;
+      font-weight: 600;
+  }
+
+  .course-nav > .nav-list > .active{
+      color: black; 
+      border-bottom: 2px solid black;
+  }
+
+  
+
+
+
 
 
 
@@ -158,9 +235,40 @@
                    <button class='sign-up'>Sign up</button>
                </li>
             </ul>  
-    
         </nav>
+        <div class="container">
+            <header class='jumbotron'>
+                <div class="text-container">
+                    <div class="texts">
+                        <h1>Everyday excellence</h1>
+                        <p>Sale ends today! Celebrate World Teachers’ Day with courses from ₩14,000.</p>
+                        <input class='text-search' placeholder='What do you want to learn?'>
+                    </div>
+                </div>
+                
+            </header>
 
+            <main class='courses-section'>
+                <div class="section-title">
+                    <h2>The world's largest selection of courses</h2>
+                    <p>Choose from 130,000 online video courses with new additions published every month</p>
+                </div>
+                <nav class='course-nav'>
+                    <ul class='nav-list'>
+                        <li class='nav-link active'>Business</li>
+                        <li class='nav-link'>Design</li>
+                        <li class='nav-link'>Photography</li>
+                        <li class='nav-link'>Development</li>
+                        <li class='nav-link'>Marketing</li>
+                        <li class='nav-link'>IT & Software</li>
+                        <li class='nav-link'>Personal Development</li>
+                    </ul>
+                </nav>
+               
+
+            </main>
+        </div>
+  
 </body>
 
 </html>
