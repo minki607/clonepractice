@@ -26,6 +26,7 @@
         --border-color :#dcdacb;
         --darker-border: #989586;
         --font-color :#3c3b37;
+        --lighter-font: #41403c;
         --light-gray: #fbfbf9;
 
     }
@@ -181,11 +182,110 @@
       border-bottom: 2px solid black;
   }
 
+.card-container {
+    margin-top: 20px;
+}
+.card {
+   max-width: 300px;
+   color: var(--lighter-font);
+}
+
+.card > .course-img {
+    width: 100%;
+
+}
+
+.card > .course-title {
+    margin-bottom :10px;
+}
+
+.card > .author{
+    font-size: 0.8em;
+    color: var(--darker-border);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.star-rating { 
+    color: #ea8930;;
+    margin-bottom: 10px;        
+}
+.star-ratings-css {
+    color: #c5c5c5;
+    font-size: 1em;
+    margin: 0 auto;
+    position: relative;
+} 
+
+.star-ratings-css::before { 
+    content: '★★★★★';
+    opacity: .3;
+}
+
+.star-ratings-css::after {
+    color: #ea8930;
+    content: '★★★★';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top:0;
+    overflow: hidden;
+}    
+
+.star-number {
+    color: var(--darker-border);
+    font-size: 0.7em;
+    font-weight: 200;
+}
+
+.card > .price {
+    margin-bottom: 10px;
+}
+
+.card > .badge span {
+    font-size: 0.7em;
+    font-weight: 400;
+    background-color: #ffe799;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px){
+    .desktop-only {
+        display: none;
+    }
   
+}
+
+@media only screen and (max-width: 700px){
+
+    .top {
+        justify-content: space-between;
+    }
+    .mobile-icon {
+        display: block;
+    }
+    .top > .nav-item:not(.logo):not(.mobile-icon):not(.top-right-menu){
+        display: none;
+    }
+
+    .top-right-menu button {
+        display: none;
+    }
+
+    .text-container {
+        max-width: 100%;
+        margin-left: 0;
+    }
 
 
-
-
+    .course-nav > .nav-list > .nav-link:nth-child(4),
+    .course-nav > .nav-list > .nav-link:nth-child(5), 
+    .course-nav > .nav-list > .nav-link:nth-child(6), 
+    .course-nav > .nav-list > .nav-link:nth-child(7) {
+        display: none;
+    }
+}
 
 
 </style>
@@ -216,12 +316,12 @@
                         </div>
                     </form>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item desktop-only">
                     <a href='#' class='nav-link'>
                         Udemy for Business
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item desktop-only">
                     <a href='#' class='nav-link'>
                         Teach on Udemy
                     </a>
@@ -264,8 +364,23 @@
                         <li class='nav-link'>Personal Development</li>
                     </ul>
                 </nav>
-               
-
+                
+                <div class="card-container">
+                    <div class="card">
+                        <img class='course-img' src='https://img-a.udemycdn.com/course/480x270/3142166_a637.jpg?DHU_wNtFWPCLUPGMrFYAleLG6I1jucN2q9v7BaOfkabTv4IZizUjL5-P-ABFuNrzryaETOfYPTC_xqDGEX1I3Xlayi0vOjHpCc563QOGW5oi6xChg_guQikduP2_sg' alt='aws-course'>
+                        <h3 class='course-title '>[NEW] Ultimate AWS Certified Cloud Practitioner - 2020</h3>
+                        <p class='author'>Stephane Maarek | AWS Certified Solutions Architect & Developer Associate</p>
+                        <p class='star-rating'> 4
+                            <span class="star-ratings-css"></span>
+                            <span class='star-number'>(14,373)</span>
+                        </p>
+                        <h3 class='price'>14000₩ </h3>
+                        <h4 class='badge'><span>Bestseller</span></h4>
+                  
+                    </div>
+                
+                </div>
+             
             </main>
         </div>
   
