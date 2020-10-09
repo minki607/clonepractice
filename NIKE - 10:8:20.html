@@ -113,6 +113,10 @@
     border: 1px solid var(--boder-color);
   }
 
+  .mobile-items {
+    display: none;
+  }
+
   .container {
     max-width: 1300px;
     margin: 0 auto;
@@ -147,6 +151,32 @@
     margin: 15px 0;
   }
 
+@media only screen and (max-width: 800px){
+  .top, 
+  .content-container > .main-menu,
+  .search
+   {
+
+    display: none;
+  }
+
+  .mobile-items{
+    display: flex;
+  }
+
+  .mobile-items > .icons > .nav-link {
+    color: black;
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .jersey-pack {
+    background-position: center;
+  }
+
+  
+  
+}
 
 
 
@@ -241,6 +271,30 @@
                     <input class='search-input' placeholder='검색'> 
                   </a>
               </li>
+
+              <div class="mobile-items">
+                  <li class="nav-item icons">
+                    <a href='#' class='nav-link'>
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                
+                  <li class="nav-item icons">
+                    <a href='#' class='nav-link'>
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                
+                  <li class="nav-item icons">
+                    <a href='#' class='nav-link'>
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                  </li>
+              </div>
+           
+
+
+              
           </div> 
         </ul>
     </nav>
